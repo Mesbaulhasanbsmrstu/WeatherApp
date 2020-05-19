@@ -13,7 +13,7 @@ protocol weathertemparaturemanagerDelegate
     func didFailWithError(error : Error)
     
 }
-var VC = ViewController()
+
 class weathertemparaturemanager
 {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=15705f7654ed7ee83de50a1af2e507d4&units=metric"
@@ -73,7 +73,7 @@ func fetchTemparature(cityname : String)
         return temp
        }  catch{
   self.delegate?.didFailWithError(error : error)
-       // VC.didFailWithError(error : error)
+     
         return nil
       
         }
