@@ -24,7 +24,7 @@ func fetchTemparature(cityname : String)
 {
    let urlString = "\(weatherURL)&q=\(cityname)"
     request(with: urlString)
-    print(urlString)
+
     }
     func request(with urlString : String)
     {
@@ -35,7 +35,7 @@ func fetchTemparature(cityname : String)
                 if error != nil {
                         
                     self.delegate?.didFailWithError(error: error!)
-                    //VC.didFailWithError(error : error!)
+                   
                            return
                            
                        }
